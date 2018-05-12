@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>chat room</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="left-wrapper">
+        <div class="online">
+            <span class="num-icon"></span>
+            在线人数（<span class="num">498</span>人）
+        </div>
+        <ul class="user-list">
+            <li class="user-item">
+                <span class="user-head"></span>
+                <span class="user-name">小小鹿</span>
+            </li>
+            <li class="user-item">
+                <span class="user-head"></span>
+                <span class="user-name">隔壁老王</span>
+            </li>
+        </ul>
+    </div>
+    <div class="right-wrapper">
+        <div class="right-top-title">
+            <img class="img" src="image/title.png" alt="">
+            <p class="title">网络一线牵、珍惜这段缘</p>
+            <a href="/robot.html"><img id="robotIcon" class="flag-icon" src="image/robot.png" alt=""></a>
+        </div>
+        <div id="msgList" class="right-msg-list">
+            <ul id="msgContent" class="msg-content">
+                <li class="msg-item receive">
+                    <div class="head-icon">
+                    </div>
+                    <div class="msg-desc">
+                        <span class="name">纸飞机</span>
+                        <span class="time">2018-05-07 15:16:23</span>
+                    </div>
+                    <div class="msg-text">
+                        <span class="text">洗澡中，请勿打扰，偷窥请购票...</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="right-send-area">
+            <div class="icon-bar">
+                <span class="icon face"></span>
+                <span class="icon pic"></span>
+            </div>
+            <form data-role="chat" id="sendForm" action="javascript:;">
+                <div class="input-area">
+                    <textarea id="inputContent" class="input" required></textarea>
+                </div>
+                <div class="btn-group">
+                    <button class="reset btn">重置</button>
+                    <input class="submit btn" type="submit" value="发送">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
+

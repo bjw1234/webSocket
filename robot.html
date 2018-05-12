@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>chat room</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+<div class="main-wrapper robot-wrapper">
+    <div class="right-wrapper">
+        <div class="right-top-title">
+            <img class="img" src="image/title1.png" alt="">
+            <p class="title">机器人——小灵</p>
+            <a href="/"><img id="chatIcon" class="flag-icon" src="image/chat.png" alt=""></a>
+        </div>
+        <div id="msgList" class="right-msg-list">
+            <ul id="msgContent" class="msg-content">
+                <li class="msg-item receive">
+                    <div class="head-icon">
+                    </div>
+                    <div class="msg-desc">
+                        <span class="name">小灵</span>
+                        <span class="time">2018-05-07 15:16:23</span>
+                    </div>
+                    <div class="msg-text">
+                        <span class="text">你好呀，我是小灵~</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="right-send-area">
+            <div class="icon-bar">
+                <span class="icon face"></span>
+                <span class="icon pic"></span>
+            </div>
+            <form data-role="robot" id="sendForm" action="javascript:;">
+                <div class="input-area">
+                    <textarea id="inputContent" class="input" required></textarea>
+                </div>
+                <div class="btn-group">
+                    <button class="reset btn">重置</button>
+                    <input class="submit btn" type="submit" value="发送">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,392 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+.main-wrapper {
+    width: 1000px;
+    height: 100%;
+    min-height: 500px;
+    margin: 0 auto;
+    background: #ebede9;
+    display: flex;
+}
+
+/*左侧区域*/
+.left-wrapper {
+    color: #ffffff;
+    flex: 0 1 200px;
+    background: #46494b;
+}
+
+.left-wrapper .online {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.left-wrapper .online .num-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url("../image/num.png") center no-repeat;
+    background-size: 25px;
+    vertical-align: top;
+    margin-top: -2px;
+}
+
+.left-wrapper .user-list {
+    margin-top: 20px;
+}
+
+.left-wrapper .user-list .user-item {
+    padding: 5px 0;
+    margin: 8px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.left-wrapper .user-list .user-item .user-head {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url("../image/user3.jpg") center no-repeat;
+    background-size: 30px;
+    vertical-align: middle;
+}
+
+.left-wrapper .user-list .user-item .user-name {
+    margin-left: 8px;
+}
+
+/*右侧区域*/
+.right-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: url("../image/back_girl_pc.jpg") left top no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.robot-wrapper {
+    width: 800px;
+}
+
+.right-top-title {
+    position: relative;
+    flex: 0 1 70px;
+    background: #c3c6cecc;
+    display: flex;
+    align-items: center;
+}
+
+.right-top-title .img {
+    width: 45px;
+    height: 45px;
+    margin: 0 25px;
+}
+
+.right-top-title .flag-icon {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.right-top-title .title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*聊天记录*/
+.right-msg-list {
+    flex: 1;
+    width: 102%;
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.right-msg-list .msg-content {
+    height: 100%;
+    padding: 10px 30px;
+}
+
+.right-msg-list .msg-item {
+    position: relative;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.right-msg-list .msg-item.receive {
+    padding-left: 60px;
+}
+
+.right-msg-list .msg-item.send {
+    padding-right: 60px;
+}
+
+.msg-item .head-icon {
+    position: absolute;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.msg-item.receive .head-icon {
+    left: 0;
+    background: url("../image/other.jpg") left top no-repeat;
+    background-size: 40px 40px;
+}
+
+.msg-item.send .head-icon {
+    right: 0;
+    background: url("../image/head.jpg") left top no-repeat;
+    background-size: 40px 40px;
+}
+
+.msg-item.receive .msg-desc {
+    color: #978e8e;
+    padding: 10px 0;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.msg-item.receive .msg-desc .name {
+    padding-right: 8px;
+}
+
+.msg-item.send .msg-desc {
+    text-align: right;
+    color: #978e8e;
+    padding: 10px 0;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.msg-item.send .msg-desc .name {
+    float: right;
+    padding-left: 10px;
+}
+
+.msg-item.receive .msg-text:before {
+    position: absolute;
+    content: '';
+    margin-left: -12px;
+    margin-top: 12px;
+    width: 0;
+    height: 0;
+    border: 12px solid;
+    border-color: #ff2ef5 #ff2ef5 transparent transparent;
+}
+
+.msg-item.send .msg-text:before {
+    position: absolute;
+    right: 0;
+    content: '';
+    margin-right: -12px;
+    margin-top: 12px;
+    width: 0;
+    height: 0;
+    border: 12px solid;
+    border-color: rebeccapurple transparent transparent rebeccapurple;
+}
+
+.msg-item.receive .msg-text {
+    position: relative;
+    background: #ff2ef5;
+    border-radius: 5px;
+}
+
+.msg-item.send .msg-text {
+    position: relative;
+    background: #2296ff;
+    border-radius: 5px;
+}
+
+.msg-item .msg-text .text {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    min-height: 25px;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    max-width: 70%;
+}
+
+.msg-item .msg-text .text img {
+    width: 100%;
+}
+
+.msg-item.send .msg-text .text {
+    background-color: rebeccapurple;
+    float: right;
+}
+
+.msg-item.receive .msg-text .text {
+    background-color: #ff2ef5;
+    float: left;
+}
+
+.right-send-area {
+    position: relative;
+    flex: 0 1 120px;
+    border-top: 1px solid #cccccc;
+    background: rgba(255, 255, 255, 0.83);
+}
+
+.right-send-area .icon-bar {
+    padding: 5px 10px;
+}
+
+.right-send-area .icon-bar .icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.right-send-area .icon-bar .face {
+    background: url("../image/face.png") no-repeat center;
+    background-size: 25px 25px;
+}
+
+.right-send-area .icon-bar .pic {
+    background: url("../image/pic.png") no-repeat center;
+    background-size: 25px 25px;
+}
+
+.right-send-area .input-area .input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    color: #222;
+    padding: 10px;
+}
+
+.right-send-area .btn-group {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.right-send-area .btn-group .btn {
+    outline: none;
+    border: none;
+    background-color: #170cff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.right-send-area .btn-group .btn:hover {
+    background: #4281ff;
+}
+
+@media screen and (max-width: 420px) {
+    .right-top-title {
+        flex: 0 1 45px;
+    }
+
+    .right-top-title .img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .right-top-title .title {
+        font-size: 14px;
+    }
+
+    .right-msg-list {
+        width: 104%;
+    }
+
+    .right-msg-list .msg-content {
+        padding: 10px 5px;
+    }
+
+    .main-wrapper {
+        width: 100%;
+    }
+
+    .left-wrapper {
+        display: none;
+    }
+
+    .right-wrapper {
+        flex: 1;
+        background: url(../image/back_girl_phone.jpg) left top no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .right-send-area {
+        flex: 0 1 60px;
+    }
+
+    .input-area {
+        height: 40px;
+        border-top: 1px #ccccccee solid;
+    }
+
+    .btn-group .reset {
+        display: none;
+    }
+
+    .btn-group .submit {
+        position: absolute;
+        right: -28px;
+        bottom: -18px;
+    }
+
+    .msg-item.send .head-icon {
+        right: 10px;
+    }
+
+    .right-msg-list .msg-item.receive {
+        padding-left: 50px;
+        margin-right: 20px;
+    }
+
+    .right-msg-list .msg-item.send {
+        padding-right: 62px;
+        margin-right: 8px;
+    }
+
+    #sendForm {
+        overflow: hidden;
+        margin-right: 83px;
+    }
+
+    .right-top-title {
+        background: rgba(195, 198, 206, 0.8);
+    }
+
+    .robot-wrapper {
+        width: auto;
+        flex: 1;
+    }
+
+    .right-top-title .flag-icon {
+        width: 25px;
+        height: 25px;
+        bottom: 10px;
+    }
+}
